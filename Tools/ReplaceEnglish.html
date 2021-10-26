@@ -11,12 +11,12 @@
                     if (str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90) {
                         var cc = str.charCodeAt(i) - 65;
                         if (upper.charAt(cc) != '?') { output += upper[cc]; }
-                        else { output += "<font class=\"invalid\">" + str.charAt(i) + "</font>"; }
+                        else { output += "<span class=\"invalid\">" + str.charAt(i) + "</span>"; }
                     }
                     else if (str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 122) {
                         var cc = str.charCodeAt(i) - 97;
                         if (upper.charAt(cc) != '?') { output += lower[cc]; }
-                        else { output += "<font class=\"invalid\">" + str.charAt(i) + "</font>"; }
+                        else { output += "<span class=\"invalid\">" + str.charAt(i) + "</span>"; }
                     }
                     else { output += str.charAt(i);}
                 }
