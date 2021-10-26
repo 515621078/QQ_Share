@@ -1,0 +1,64 @@
+﻿<html>
+    <head>
+        <title>符号代替英文</title>
+        <script type="text/javascript">
+            var upper = "АΒС?Е??НΙ亅К乚МΝОРΩΓ$Т∪∨ΨХУΖ";
+            var lower = "αьс?е??н讠亅кㅣмпор☥г$τцνωху☡";
+            function run() {
+                var output = "";
+                var str = document.getElementById("inp").value;
+                for (var i = 0; i < str.length; i++) {
+                    if (str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90) {
+                        var cc = str.charCodeAt(i) - 65;
+                        if (upper.charAt(cc) != '?') { output += upper[cc]; }
+                        else { output += "<font class=\"invalid\">" + str.charAt(i) + "</font>"; }
+                    }
+                    else if (str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 122) {
+                        var cc = str.charCodeAt(i) - 97;
+                        if (upper.charAt(cc) != '?') { output += lower[cc]; }
+                        else { output += "<font class=\"invalid\">" + str.charAt(i) + "</font>"; }
+                    }
+                    else { output += str.charAt(i);}
+                }
+                document.getElementById("op").innerHTML = output;
+            }
+        </script>
+        <style type="text/css">
+            .invalid{
+                color:red;
+            }
+            #inp{
+                width:100%;
+                height:40%;
+                font-size:10vmin;
+                background-color:#A0A0A0;
+            }
+            #bt{
+                border-radius: 2em;
+                margin-left:25%;
+                width:50%;
+                height:20%;
+                text-align:center;
+                vertical-align:middle;
+                font-size:10vmin;
+                background-color:gray;
+            }
+            #op{
+                display:flex;
+                width:100%;
+                height:40%;
+                vertical-align:middle;
+                align-items:center;
+                font-size:10vmin;
+            }
+            body{
+                background-color:gray;
+            }
+        </style>
+    </head>
+    <body>
+        <input id="inp" type="text" onchange="run()" oninput="run()"/><br />
+        <button id="bt" onclick="run()">转换</button><br />
+        <label id="op"></label>
+    </body>
+</html>
