@@ -10,15 +10,15 @@
                 for (var i = 0; i < str.length; i++) {
                     if (str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90) {
                         var cc = str.charCodeAt(i) - 65;
-                        if (upper.charAt(cc) != '?') { output += upper[cc]; }
+                        if (upper.charAt(cc) != '?') { output += "<span class=\"valid\">" + upper[cc] + "</span>";}
                         else { output += "<span class=\"invalid\">" + str.charAt(i) + "</span>"; }
                     }
                     else if (str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 122) {
                         var cc = str.charCodeAt(i) - 97;
-                        if (upper.charAt(cc) != '?') { output += lower[cc]; }
+                        if (upper.charAt(cc) != '?') { output += "<span class=\"valid\">" + lower[cc] + "</span>"; }
                         else { output += "<span class=\"invalid\">" + str.charAt(i) + "</span>"; }
                     }
-                    else { output += str.charAt(i);}
+                    else { output += "<span class=\"invalid\">" + str.charAt(i) + "</span>";}
                 }
                 document.getElementById("op").innerHTML = output;
             }
