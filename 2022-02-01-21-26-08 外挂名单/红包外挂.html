@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        /* 页面背景暗色，字体颜色亮色 */
+        body{
+            background-color:#1E1E1E;
+            color:#E8E8E8
+        }
+        /* 去掉表格默认间隙，添加 表格 4px 外边框 */
+        #mainTable{
+            border-collapse:collapse;
+            border:4px solid white;
+        }
+        /* 表头和内容之间添加 3px 分割线 */
+        #mainTable>thead{
+            border-bottom:3px solid white;
+        }
+        /* 表头和内容在右侧添加 2px 分割线 并添加 5px 左右间隙 */
+        #mainTable>thead>tr>td,
+        #mainTable>tbody>tr>td{
+            border-right:2px solid white;
+            padding-left:5px;
+            padding-right:5px;
+        }
+        /* 账号右对齐 */
+        #mainTable>tbody>tr>td:nth-child(3){
+            text-align:right;
+        }
+    </style>
+</head>
+<body>
+    <table id="mainTable">
+        <thead>
+            <tr><td>账号类型</td><td>审核状态</td><td>账号</td><td>软件</td><td>外挂登记时间</td><td>备注</td><td>发生地点</td></tr>
+        </thead>
+        <tbody>
+            <tr><td>QQ号</td><td>核实</td><td>2191508745</td><td>QQ - 群</td><td>2022/2/1 21:17:10</td><td>QQ群抢红包外挂</td><td>vNqseURldCKAxrq22lBQRQ==</td></tr>
+            <tr><td>QQ号</td><td>核实</td><td>977812972</td><td>QQ - 群</td><td>2022/2/1 21:17:11</td><td>QQ群抢红包外挂</td><td>vNqseURldCKAxrq22lBQRQ==</td></tr>
+            <tr><td>QQ号</td><td>核实</td><td>1127205706</td><td>QQ - 群</td><td>2022/2/1 21:17:11</td><td>QQ群抢红包外挂</td><td>vNqseURldCKAxrq22lBQRQ==</td></tr>
+            <tr><td>QQ号</td><td>待审</td><td>2842013896</td><td>QQ - 群</td><td>2022/2/1 21:25:05</td><td>QQ群抢红包外挂</td><td>vNqseURldCKAxrq22lBQRQ==</td></tr>
+        </tbody>
+    </table>
+</body>
+</html>
