@@ -15,6 +15,7 @@
             white-space:pre-line;
             height:790px;
             overflow-y:scroll;
+            overflow-x:auto;
             width:500px;
         }
         .live dt{
@@ -27,19 +28,25 @@
             width:auto;
             max-height:790px;
         }
-        
+        /*坐标*/
         loc{
-            color:gold;
-            white-space:pre;
+            color:orange;
         }
+        /*俄罗斯*/
         e{
             color:red;
         }
+        /*乌克兰*/
+        w{
+            color:deepskyblue;
+        }
+        /*城市*/
         c{
             color:aquamarine;
         }
-        w{
-            color:deepskyblue;
+        /*街道*/
+        t{
+            color:cadetblue;
         }
 
         #cur{
@@ -130,107 +137,106 @@
     </script>
 </head>
 <body>
-<div class="live">
+<div class="live"><span style="font-size:10px">鼠标悬停可高亮发生地点（手机需要点击，左侧可以滑动以查看历史记录）</span>
     <table class="t1">
         <tbody class="tb1">
             <tr><td><dt>02/27</dt></td><td></td><td></td></tr>
-            <tr ><td>00:47</td><td>N10</td><td><e> 俄 </e>部队已在(Berdyansk)部署阵地</td></tr>
+            <tr ><td>00:47</td><td>N10</td><td><e> 俄 </e>部队已在<c> Berdyansk </c>部署阵地</td></tr>
             <tr><td><dt>02/26</dt></td><td></td><td></td></tr>
             <tr><td>22:XX</td><td>N10</td><td><e> 俄 </e>装甲从 <c> Berdyansk </c> 离开前往 <c> Mariupol </c></td></tr>
             <tr><td>21:XX</td><td>I03</td><td><w> 乌 </w>俘虏了部分<e> 俄 </e>士兵</td></tr>
-            <tr><td>21:XX</td><td>M06</td><td><e> 俄 </e>向(Kharkiv)轰炸</td></tr>
-            <tr><td>21:XX</td><td>N10</td><td><e> 俄 </e>装甲部队向南(Osipenko)村推进</td></tr>
+            <tr><td>21:XX</td><td>M06</td><td><e> 俄 </e>向<c> Kharkiv </c>轰炸</td></tr>
+            <tr><td>21:XX</td><td>N10</td><td><e> 俄 </e>装甲部队向南<c> Osipenko </c>村推进</td></tr>
             <tr><td>21:XX</td><td>L10</td><td><e> 俄 </e>装甲于该地向前线推进</td></tr>
-            <tr><td>20:XX</td><td>I04</td><td><w> 乌 </w>部队向(Kharkiv)北部推进</td></tr>
+            <tr><td>20:XX</td><td>I04</td><td><w> 乌 </w>部队向<c> Kharkiv </c>北部推进</td></tr>
             <tr><td>20:XX</td><td>N07</td><td>该地一处<w> 乌 </w>的燃油补给被瘫痪</td></tr>
-            <tr><td>19:XX</td><td>I03</td><td><e> 俄 </e>对(Chernihiv)周边进行轰炸</td></tr>
+            <tr><td>19:XX</td><td>I03</td><td><e> 俄 </e>对<c> Chernihiv </c>周边进行轰炸</td></tr>
             <tr><td>19:XX</td><td>P07</td><td><e> 俄 </e>对该地区进行轰炸</td></tr>
             <tr><td>19:XX</td><td>L06</td><td><e> 俄 </e>对该地区进行轰炸</td></tr>
-            <tr><td>19:XX</td><td>M10</td><td><e> 俄 </e>装甲进入(Kutuzivka)</td></tr>
+            <tr><td>19:XX</td><td>M10</td><td><e> 俄 </e>装甲进入<c> Kutuzivka </c></td></tr>
             <tr><td>18:XX</td><td>Q08</td><td><e> 俄 </e>占领了该地区</td></tr>
-            <tr><td>18:XX</td><td>M10</td><td><e> 俄 </e>装甲进入(Tokmak)</td></tr>
-            <tr><td>18:XX</td><td>C06</td><td><e> 俄 </e>空降该地的(Brody)城</td></tr>
+            <tr><td>18:XX</td><td>M10</td><td><e> 俄 </e>装甲进入<c> Tokmak </c></td></tr>
+            <tr><td>18:XX</td><td>C06</td><td><e> 俄 </e>空降该地的<c> Brody </c>城</td></tr>
             <tr><td>18:XX</td><td>N05</td><td><e> 俄 </e>导弹部署在该地区发射导弹</td></tr>
-            <tr><td>17:XX</td><td>M10</td><td><e> 俄 </e>补给车和军事部署向城市(Tokmak)移动</td></tr>
+            <tr><td>17:XX</td><td>M10</td><td><e> 俄 </e>补给车和军事部署向城市<c> Tokmak </c>移动</td></tr>
             <tr><td>17:XX</td><td>L04</td><td><w> 乌 </w><c> Sumy </c>部分民兵逼退少数<e> 俄 </e>士兵</td></tr>
             <tr><td>17:XX</td><td>L04</td><td><w> 乌 </w>在<c> Sumy </c>俘虏部分<e> 俄 </e>士兵</td></tr>
             <tr><td>16:XX</td><td>H05</td><td><w> 乌 </w>炸毁<c> 基辅 </c>西部 M-06高速 大桥</td></tr>
+            <tr><td><dt>02/25</dt></td><td></td><td></td></tr>
+            <tr><td>18:3X</td><td>H05</td><td><c> 基辅 </c>北部桥梁被<w> 乌 </w>炸断</td></tr>
+            <tr><td>17:5X</td><td>H05</td><td><c> 基辅 </c>市议会要求奥波隆的平民就地避难</td></tr>
+            <tr><td>17:5X</td><td>M10</td><td><e> 俄 </e>直升机Ka-52进入该地区辅助步兵清点</td></tr>
+            <tr><td>17:2X</td><td>F07</td><td><w> 乌 </w>逮捕一疑似给<e> 俄 </e>做手势的私家车司机</td></tr>
+            <tr><td>17:XX</td><td>H05</td><td><e> 俄 </e>军已进入<c> Obolon </c>的<t> Bohatyrska St </t></td></tr>
+            <tr><td>16:5X</td><td>F05</td><td><e> 俄 </e>轰炸<c> Ushomyr </c></td></tr>
+            <tr><td>16:2X</td><td>H05</td><td><w> 乌 </w>疑似用私家车做路障试图阻拦装甲车</td></tr>
+            <tr><td>16:2X</td><td>H05</td><td><e> 俄 </e>装甲再次进入<c> 基辅 </c>北部</td></tr>
+            <tr><td>16:1X</td><td>H04</td><td><c> 切尔诺贝利 </c>辐射水平疑似正常 辐射或为谣传</td></tr>
+            <tr><td>16:0X</td><td>H04</td><td><c> 切尔诺贝利 </c> 不可靠消息称辐射上升 原因未知</td></tr>
+            <tr><td>16:0X</td><td>H05</td><td><e> 俄 </e>VDV伞兵在<t> Hostomel </t>管制交通</td></tr>
+            <tr><td>15:4X</td><td>H05</td><td>坐标 <cord>50°31′N 30°27′E</cord> 交火</td></tr>
+            <tr><td>15:4X</td><td>H05</td><td><c> 基辅 </c>北<e> 俄 </e>步兵消失</td></tr>
+            <tr><td>15:3X</td><td>H05</td><td><e> 俄 </e>直升机从北侧接近<c> 基辅 </c></td></tr>
+            <tr><td>15:3X</td><td>H05</td><td><e> 俄 </e>再次进攻机场</td></tr>
+            <tr><td>15:3X</td><td>J04</td><td><w> 乌 </w>将Seym桥梁炸毁可能意图阻止坦克</td></tr>
+            <tr><td>15:2X</td><td>I12</td><td>该地区发现<e> 俄 </e>军舰</td></tr>
+            <tr><td>15:1X</td><td>O08</td><td><w> 乌 </w>对该地区进行反击击毁2坦克</td></tr>
+            <tr><td>15:1X</td><td>J11</td><td><e> 俄 </e>战斗机对该地区<w> 乌 </w>军进行轰炸</td></tr>
+            <tr><td>15:1X</td><td>M06</td><td><e> 俄 </e>运兵车从北部接近<c> 哈尔科夫 </c></td></tr>
+            <tr><td>15:0X</td><td>H05</td><td><e> 俄 </e>运兵车已进入<c> 基辅 </c>北部</td></tr>
+            <tr><td>15:0X</td><td>L05</td><td><e> 俄 </e>坦克加入<c> Kyrykivka </c>前往<c> Okhtyrka </c></td></tr>
+            <tr><td>14:5X</td><td>M10</td><td><e> 俄 </e>部队进入<c> Melitopol </c></td></tr>
+            <tr><td>14:4X</td><td>J11</td><td>赫尔松<w> 乌 </w>桥部队遭<e> 俄 </e>轰炸</td></tr>
+            <tr><td>14:4X</td><td>Q07</td><td><e> 俄 </e><c> Millerovo </c>遭轰炸</td></tr>
+            <tr><td>14:4X</td><td>P07</td><td>该地发现<w> 乌 </w>方炮兵部队</td></tr>
+            <tr><td>13:XX</td><td>H05</td><td><c> 基辅 </c><t> NewIrpen 高速桥 </t>被<e> 俄 </e>炸毁</td></tr>
+            <tr><td>13:XX</td><td>H05</td><td><c> 基辅 </c>警报全面响起</td></tr>
+            <tr><td>13:XX</td><td>K10</td><td><e> 俄 </e>MLRS GRAD部署在该城</td></tr>
+            <tr><td>13:XX</td><td>K10</td><td><e> 俄 </e>部队进入<c> Nova Kakhovka </c></td></tr>
+            <tr><td>13:XX</td><td>D05</td><td>两<e> 俄 </e>导弹轰炸<t> Rivne机场 </t></td></tr>
+            <tr><td>13:XX</td><td>P07</td><td><e> 俄 </e>东侧开始进攻地区</td></tr>
+            <tr><td>12:XX</td><td>H05</td><td><c> 基辅 </c>桥梁被轰炸</td></tr>
+            <tr><td>12:XX</td><td>G04</td><td><e> 俄 </e>装甲部队从北接近<c> 基辅 </c></td></tr>
+            <tr><td>12:XX</td><td>H11</td><td><w> 乌 </w>响起警报</td></tr>
+            <tr><td>11:XX</td><td>M11</td><td><e> 俄 </e>对沿海地区进行了轰炸</td></tr>
+            <tr><td>11:XX</td><td>H05</td><td><c> 基辅 </c>响起防空警报</td></tr>
+            <tr><td>11:XX</td><td>H05</td><td><c> 基辅 </c>东南<t> LowerGardens </t>连续轰炸</td></tr>
+            <tr><td>11:XX</td><td>H05</td><td><c> 基辅 </c>中心发现类似照明弹</td></tr>
+            <tr><td>11:XX</td><td>H05</td><td><c> 基辅 </c>东桥对面有大爆炸</td></tr>
+            <tr><td>10:XX</td><td>H05</td><td><c> 基辅 </c>东南河对面遭两发大轰炸</td></tr>
+            <tr><td>10:XX</td><td>B10</td><td>4架<w> 乌 </w>USAF KC-135开始移动</td></tr>
+            <tr><td>10:XX</td><td>B06</td><td><w> 乌 </w>IL-76s离开<c> Lviv </c></td></tr>
+            <tr><td>10:XX</td><td>K04</td><td><e> 俄 </e>装甲包围城市后向西方突击</td></tr>
+            <tr><td>09:XX</td><td>N06</td><td><e> 俄 </e>突击<c> 哈尔科夫 </c>东南侧</td></tr>
+            <tr><td>08:XX</td><td>K05</td><td><e> 俄 </e>装甲部队进入地区</td></tr>
+            <tr><td>06:0X</td><td>I11</td><td><e> 俄 </e>对<c> Ochakiv </c>进行了轰炸</td></tr>
+            <tr><td>06:0X</td><td>H05</td><td>泽伦斯基总统签署一总动员法令</td></tr>
+            <tr><td>05:5X</td><td>N06</td><td><w> 乌 </w>对地区做出反应部署</td></tr>
+            <tr><td>05:5X</td><td>K10</td><td>南部战区<w> 乌 </w>夺回桥梁</td></tr>
+            <tr><td>05:4X</td><td>H05</td><td><e> 俄 </e>宣当地三点炸首都，通知避难</td></tr>
+            <tr><td>05:3X</td><td></td><td>       土耳其可能支持<w> 乌 </w>，<w> 乌 </w>商讨求援</td></tr>
+            <tr><td>04:5X</td><td>M06</td><td><c> 哈尔科夫 </c>冲突加剧平民睡地铁里</td></tr>
+            <tr><td>04:4X</td><td>L05</td><td><c> Sumy </c>附近有剧烈冲突</td></tr>
+            <tr><td>04:3X</td><td>O07</td><td><w> 乌 </w>炸了该地区桥梁防止<e> 俄 </e>通过</td></tr>
+            <tr><td>04:1X</td><td>M06</td><td>在该区域发现可见爆炸</td></tr>
+            <tr><td>03:XX</td><td>N06</td><td>医疗部称<w> 乌 </w>57人死，169伤。</td></tr>
+            <tr><td>03:XX</td><td>P04</td><td><e> 俄 </e>An-26坠毁</td></tr>
+            <tr><td>03:XX</td><td>K10</td><td><e> 俄 </e>跨河（南部）</td></tr>
+            <tr><td>02:XX</td><td>H05</td><td><w> 乌 </w>夺回机场，陷入争夺</td></tr>
+            <tr><td><dt>02/24</dt></td><td></td><td></td></tr>
+            <tr><td>23:5X</td><td>H04</td><td><w> 乌 </w>占领H04东北部桥梁</td></tr>
+            <tr><td>23:4X</td><td>L05</td><td><w> 乌 </w>击退<e> 俄 </e>并夺回<c> Okhtyrka </c></td></tr>
+            <tr><td>23:3X</td><td>H05</td><td><w> 乌 </w>击落<e> 俄 </e>3架直升机并炮反击</td></tr>
+            <tr><td>23:1X</td><td>K04</td><td><w> 乌 </w>军队用Jav瘫痪<e> 俄 </e>坦克15辆</td></tr>
+            <tr><td>23:1X</td><td>L11</td><td><e> 俄 </e>军队占领了<c> Henichesk </c></td></tr>
+            <tr><td>22:4X</td><td>H05</td><td><e> 俄 </e><w> 乌 </w>军队接触</td></tr>
+            <tr><td>21:5X</td><td>H03</td><td><e> 俄 </e>导弹向西南方向发射</td></tr>
+            <tr><td>21:3X</td><td>L11</td><td><e> 俄 </e>军队部署</td></tr>
+            <tr><td>21:2X</td><td>L04</td><td><w> 乌 </w><e> 俄 </e>步兵在<c> Sumy </c>接敌</td></tr>
+            <tr><td>20:4X</td><td>H05</td><td><e> 俄 </e>直升被<w> 乌 </w>击落在<c> 基辅 </c>北侧</td></tr>
+            <tr><td>19:5X</td><td>H06</td><td><w> 乌 </w>飞机在<c> 基辅 </c>南侧坠毁</td></tr>
         </tbody>
     </table>
-<dt>02/25</dt>
-18:3X <loc>H05</loc> <c> 基辅 </c>北部桥梁被<w> 乌 </w>炸断
-17:5X <loc>H05</loc> <c> 基辅 </c>市议会要求奥波隆的平民就地避难
-17:5X <loc>M10</loc> <e> 俄 </e>直升机Ka-52进入该地区辅助步兵清点
-17:2X <loc>F07</loc> <w> 乌 </w>逮捕一疑似给<e> 俄 </e>做手势的私家车司机
-17:XX <loc>H05</loc> <e> 俄 </e>军已进入Obolon 的 Bohatyrska St
-16:5X <loc>F05</loc> <e> 俄 </e>轰炸Ushomyr
-16:2X <loc>H05</loc> <w> 乌 </w>疑似用私家车做路障试图阻拦装甲车
-16:2X <loc>H05</loc> <e> 俄 </e>装甲再次进入<c> 基辅 </c>北部
-16:1X <loc>H04</loc> 切尔诺贝利 辐射水平疑似正常 辐射或为谣传
-16:0X <loc>H04</loc> 切尔诺贝利 不可靠消息称辐射上升 原因未知
-16:0X <loc>H05</loc> <e> 俄 </e>VDV伞兵在Hostomel管制交通
-15:4X <loc>H05</loc> 坐标 <cord>50°31′N 30°27′E</cord> 交火
-15:4X <loc>H05</loc> <c> 基辅 </c>北<e> 俄 </e>步兵寄了
-15:3X <loc>H05</loc> <e> 俄 </e>直升机从北侧接近<c> 基辅 </c>
-15:3X <loc>H05</loc> <e> 俄 </e>再次进攻机场
-15:3X <loc>J04</loc> <w> 乌 </w>将Seym桥梁炸毁可能意图阻止坦克
-15:2X <loc>I12</loc> 该地区发现<e> 俄 </e>军舰
-15:1X <loc>O08</loc> <w> 乌 </w>对该地区进行反击击毁2坦克
-15:1X <loc>J11</loc> <e> 俄 </e>战斗机对该地区<w> 乌 </w>军进行轰炸
-15:1X <loc>M06</loc> <e> 俄 </e>运兵车从北部接近<c> 哈尔科夫 </c>
-15:0X <loc>H05</loc> <e> 俄 </e>运兵车已进入<c> 基辅 </c>北部
-15:0X <loc>L05</loc> <e> 俄 </e>坦克加入Kyrykivka前往Okhtyrka
-14:5X <loc>M10</loc> <e> 俄 </e>部队进入Melitopol
-14:4X <loc>J11</loc> 赫尔松<w> 乌 </w>桥部队遭<e> 俄 </e>轰炸
-14:4X <loc>Q07</loc> <e> 俄 </e>Millerovo遭轰炸
-14:4X <loc>P07</loc> 该地发现<w> 乌 </w>方炮兵部队
-13:XX <loc>H05</loc> <c> 基辅 </c>NewIrpen高速桥被<e> 俄 </e>炸毁
-13:XX <loc>H05</loc> <c> 基辅 </c>警报全面响起
-13:XX <loc>K10</loc> <e> 俄 </e>MLRS GRAD部署在该城
-13:XX <loc>K10</loc> <e> 俄 </e>部队进入<c> Nova Kakhovka </c>
-13:XX <loc>D05</loc> 两<e> 俄 </e>导弹轰炸Rivne机场
-13:XX <loc>P07</loc> <e> 俄 </e>东侧开始进攻<loc>P07</loc>地区
-12:XX <loc>H05</loc> <c> 基辅 </c>桥梁被轰炸
-12:XX <loc>G04</loc> <e> 俄 </e>装甲部队从北接近<c> 基辅 </c>
-12:XX <loc>H11</loc> <w> 乌 </w>响起警报
-11:XX <loc>M11</loc> <e> 俄 </e>对沿海<loc>M11</loc>地区进行了轰炸
-11:XX <loc>H05</loc> <c> 基辅 </c>响起防空警报
-11:XX <loc>H05</loc> <c> 基辅 </c>东南LowerGardens连续轰炸
-11:XX <loc>H05</loc> <c> 基辅 </c>中心发现类似照明弹
-11:XX <loc>H05</loc> <c> 基辅 </c>东桥对面有大爆炸
-10:XX <loc>H05</loc> <c> 基辅 </c>东南河对面遭两发大轰炸
-10:XX <loc>B10</loc> 4架<w> 乌 </w>USAF KC-135开始移动
-10:XX <loc>B06</loc> <w> 乌 </w>IL-76s离开Lviv城
-10:XX <loc>K04</loc> <e> 俄 </e>装甲包围城市后向西方突击
-09:XX <loc>N06</loc> <e> 俄 </e>突击<c> 哈尔科夫 </c>东南侧
-08:XX <loc>K05</loc> <e> 俄 </e>装甲部队进入<loc>K05</loc>地区
-06:0X <loc>I11</loc> <e> 俄 </e>对<c> Ochakiv </c>城<loc>I11</loc>进行了轰炸
-06:0X <loc>H05</loc> 泽伦斯基总统签署一总动员法令
-05:5X <loc>N06</loc> <w> 乌 </w>对<loc>N06</loc>地区做出反应部署
-05:5X <loc>K10</loc> 南部战区<w> 乌 </w>夺回桥梁
-05:4X <loc>H05</loc> <e> 俄 </e>宣当地三点炸首都，通知避难
-05:3X <loc>   </loc>    土耳其可能支持<w> 乌 </w>，<w> 乌 </w>商讨求援
-04:5X <loc>M06</loc> <c> 哈尔科夫 </c>冲突加剧平民睡地铁里
-04:4X <loc>L05</loc> <c> Sumy </c>附近有剧烈冲突
-04:3X <loc>O07</loc> <w> 乌 </w>炸了该地区桥梁防止<e> 俄 </e>通过
-04:1X <loc>M06</loc> 在该区域发现可见爆炸
-03:XX <loc>N06</loc> 医疗部称<w> 乌 </w>57人寄，169伤。
-03:XX <loc>P04</loc> <e> 俄 </e>An-26坠毁在<loc>P04</loc>
-03:XX <loc>K10</loc> <e> 俄 </e>跨河（南部）
-02:XX <loc>H05</loc> <w> 乌 </w>夺回机场，陷入争夺
-<dt>02/24</dt>
-23:5X <loc>H04</loc> <w> 乌 </w>占领<loc>H04</loc>东北部桥梁
-23:4X <loc>L05</loc> <w> 乌 </w>击退<e> 俄 </e>并夺回<c> Okhtyrka </c>
-23:3X <loc>H05</loc> <w> 乌 </w>击落<e> 俄 </e>3架直升机并炮反击
-23:1X <loc>K04</loc> <w> 乌 </w>军队用Jav瘫痪<e> 俄 </e>坦克15辆
-23:1X <loc>L11</loc> <e> 俄 </e>军队占领了<loc>L11</loc>(Henichesk)
-22:4X <loc>H05</loc> <e> 俄 </e><w> 乌 </w>军队在<loc>H05</loc>接触
-21:5X <loc>H03</loc> <e> 俄 </e>导弹向西南方向发射
-21:3X <loc>L11</loc> <e> 俄 </e>军队在<loc>L11</loc>部署
-21:2X <loc>L04</loc> <w> 乌 </w><e> 俄 </e>步兵在<c> Sumy </c>接敌
-20:4X <loc>H05</loc> <e> 俄 </e>直升被<w> 乌 </w>击落在<c> 基辅 </c>北侧
-19:5X <loc>H06</loc> <w> 乌 </w>飞机在<c> 基辅 </c>南侧坠毁
-
 </div>
 <img class="pic" alt="" src="Images\image.jpg" />
 <div id="cur"></div>
