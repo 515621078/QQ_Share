@@ -42,6 +42,15 @@
             color:deepskyblue;
         }
 
+        #cur{
+            position:absolute;
+            left:565px;
+            top:-100px;
+            width:67px;
+            height:67px;
+            background-color:rgba(255,0,255,0.2);
+        }
+
         .tb1{
             font-weight:bold;
         }
@@ -56,13 +65,76 @@
                 white-space:pre;
             }
     </style>
+    <script type="text/javascript" src="http://hovertree.com/ziyuan/jquery/jquery-1.11.3.min.js"></script>
+    <script>
+        function ShowArea(pos) {
+            if (pos != NaN && pos != "") {
+                var cur = document.getElementById("cur");
+                var left = 565;
+                var top = 8;
+                cur.style.left = left + "px";
+                cur.style.top = top + "px";
+                //横坐标常量
+                const xA = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R"];
+                //获取当前位置
+                var xPos = -1;
+                for (var i = 0; i < xA.length; i++) { if (xA[i] == pos[0]) { xPos = i; } }
+                if (xPos != -1) {
+                    var yPos = pos[1] + pos[2];
+                    cur.style.left = (left + xPos * 65.9) + "px";
+                    cur.style.top = (top + (yPos - 2) * 65.9) + "px";
+                }
+            }
+        }
+        function HideArea() {
+            var cur = document.getElementById("cur");
+            var left = 565;
+            var top = -100;
+            cur.style.left = left + "px";
+            cur.style.top = top + "px";
+        }
+        $.extend({
+            'HideAreaJq': function (sender) {
+                sender.css("background-color", "1E1E1E");
+                HideArea();
+            }
+        });
+        $(function () {
+            $(".tb1 tr").mouseover(function () {
+                var tar = $(this).children("td:eq(1)");
+                if (tar.text() != "" && tar.text().length == 3) {
+                    ShowArea(tar.text());
+                    $(this).css("background-color","4E4E4E");
+                }
+            });
+        });
+        $(function () {
+            $(".tb1 tr").mouseout(function () {
+                var tar = $(this).children("td:eq(1)");
+                if (tar.text() != "" && tar.text().length == 3) {
+                    HideArea();
+                    $(this).css("background-color", "1E1E1E");
+                }
+            });
+        });
+        $(function () {
+            $(".tb1 tr").mousedown(function () {
+                var tar = $(this).children("td:eq(1)");
+                if (tar.text() != "" && tar.text().length == 3) {
+                    $(this).css("background-color", "4E4E4E");
+                    ShowArea(tar.text());
+                    setTimeout($.HideAreaJq, 3000, $(this));
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 <div class="live">
     <table class="t1">
         <tbody class="tb1">
             <tr><td><dt>02/27</dt></td><td></td><td></td></tr>
-            <tr><td>00:47</td><td>N10</td><td><e> 俄 </e>部队已在(Berdyansk)部署阵地</td></tr>
+            <tr ><td>00:47</td><td>N10</td><td><e> 俄 </e>部队已在(Berdyansk)部署阵地</td></tr>
             <tr><td><dt>02/26</dt></td><td></td><td></td></tr>
             <tr><td>22:XX</td><td>N10</td><td><e> 俄 </e>装甲从 <c> Berdyansk </c> 离开前往 <c> Mariupol </c></td></tr>
             <tr><td>21:XX</td><td>I03</td><td><w> 乌 </w>俘虏了部分<e> 俄 </e>士兵</td></tr>
@@ -161,5 +233,6 @@
 
 </div>
 <img class="pic" alt="" src="Images\image.jpg" />
+<div id="cur"></div>
 </body>
 </html>
