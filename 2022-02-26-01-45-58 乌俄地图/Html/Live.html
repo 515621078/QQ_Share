@@ -16,7 +16,7 @@
             height:790px;
             overflow-y:scroll;
             overflow-x:auto;
-            width:500px;
+            max-width:500px;
         }
         .live dt{
             color:gray;
@@ -48,6 +48,10 @@
         t{
             color:cadetblue;
         }
+        /*信息来源地*/
+        f{
+            color:#2F2F2F;
+        }
 
         #cur{
             position:absolute;
@@ -60,6 +64,7 @@
 
         .tb1{
             font-weight:bold;
+            white-space:pre;
         }
             .tb1 tr td{
                 padding-right:10px;
@@ -71,6 +76,15 @@
                 color:gold;
                 white-space:pre;
             }
+
+        #overlay_switch{
+            position:absolute;
+            left:509px;
+            top:5px;
+            z-index:1;
+            font-weight:bold;
+            background-color:aqua;
+        }
     </style>
     <script type="text/javascript" src="https://hovertree.com/ziyuan/jquery/jquery-1.11.3.min.js"></script>
     <script>
@@ -108,17 +122,17 @@
         });
         $(function () {
             $(".tb1 tr").mouseover(function () {
-                var tar = $(this).children("td:eq(1)");
-                if (tar.text() != "" && tar.text().length == 3) {
-                    ShowArea(tar.text());
+                var tart = $(this).children("td:eq(1)").text();
+                if (tart != "" && tart.length == 3) {
+                    ShowArea(tart);
                     $(this).css("background-color","4E4E4E");
                 }
             });
         });
         $(function () {
             $(".tb1 tr").mouseout(function () {
-                var tar = $(this).children("td:eq(1)");
-                if (tar.text() != "" && tar.text().length == 3) {
+                var tart = $(this).children("td:eq(1)").text();
+                if (tart != "" && tart.length == 3) {
                     HideArea();
                     $(this).css("background-color", "1E1E1E");
                 }
@@ -126,14 +140,25 @@
         });
         $(function () {
             $(".tb1 tr").mousedown(function () {
-                var tar = $(this).children("td:eq(1)");
-                if (tar.text() != "" && tar.text().length == 3) {
+                var tart = $(this).children("td:eq(1)").text();
+                if (tart != "" && tart.length == 3) {
                     $(this).css("background-color", "4E4E4E");
-                    ShowArea(tar.text());
+                    ShowArea(tart);
                     setTimeout($.HideAreaJq, 3000, $(this));
                 }
             });
         });
+    </script>
+    <script>
+        function switchOverlay() {
+            var tar = document.getElementById("picsrc");
+            if (tar.hasAttribute("hidden")) {
+                tar.removeAttribute("hidden");
+            }
+            else {
+                tar.setAttribute("hidden", "hidden");
+            }
+        }
     </script>
 </head>
 <body>
@@ -141,7 +166,25 @@
     <table class="t1">
         <tbody class="tb1">
             <tr><td><dt>02/27</dt></td><td></td><td></td></tr>
-            <tr ><td>00:47</td><td>N10</td><td><e> 俄 </e>部队已在<c> Berdyansk </c>部署阵地</td></tr>
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td>05:XX</td><td>J10</td><td><e> 俄 </e>步兵出现</td></tr>
+            <tr><td>05:XX</td><td>L09</td><td><e> 俄 </e>轰炸<c> Zaporizhia</c></td></tr>
+            <tr><td>05:XX</td><td>N07</td><td><e> 俄 </e>攻击<t> Balakleya</t></td></tr>
+            <tr><td>04:XX</td><td>M06</td><td><e> 俄 </e>在轰炸掩护下试图从北推进<c> Kharkiv</c></td></tr>
+            <tr><td>03:XX</td><td>H05</td><td><w> 乌 </w>消灭<e> 俄 </e>破坏者于<c> Kyiv </c>东南<t> Darnitsky</t></td></tr>
+            <tr><td>03:XX</td><td>I03</td><td><w> 乌 </w>向<e> 俄 </e>车辆投掷燃烧瓶<t> Rivnopillia 附近</t></td></tr>
+            <tr><td>03:XX</td><td>K10</td><td><w> 乌 </w>击落<e> 俄 </e>Su-25 (用 MANPADS)</td></tr>
+            <tr><td>03:XX</td><td>H04</td><td><t>Kirovo </t>与<t> Pustynky</t>连接桥梁损毁 <f>卫星</f></td></tr>
+            <tr><td>02:XX</td><td>K10</td><td><w> 乌 </w>击落<e> 俄 </e>Mi-24 <f>Berysiav</f></td></tr>
+            <tr><td>02:XX</td><td>O08</td><td><w> 乌 </w>进攻<t> Rubizhne </t></td></tr>
+            <tr><td>02:XX</td><td>P09</td><td><c> Luhansk </c>南部<t> Rovenky </t>一处油料起火</td></tr>
+            <tr><td>02:XX</td><td>M10</td><td><e> 俄 </e>TOS-1 多管火箭车<c> Tokmak</c></td></tr>
+            <tr><td>02:XX</td><td>H05</td><td><c> Kyiv </c>北城区交战<t> Obolon</t></td></tr>
+            <tr><td>02:XX</td><td>H05</td><td><c> Kyiv </c>北部交战于<t> Holosiiv National Nature Park</t></td></tr>
+            <tr><td>02:XX</td><td>M06</td><td><w> 乌 </w>在<c> Kharkiv </c>抓获<e> 俄 </e>渗透小队</td></tr>
+            <tr><td>02:XX</td><td>L05</td><td><e> 俄 </e>对<c> Sumy </c>的<w> 乌 </w>进行轰炸</td></tr>
+            <tr><td>02:XX</td><td>G03</td><td><e> 俄 </e>运输卡车在18:00位于<c> Belarus </c>的<t> Yelsk </t></td></tr>
+            <tr><td>00:47</td><td>N10</td><td><e> 俄 </e>部队已在<c> Berdyansk </c>部署阵地</td></tr>
             <tr><td><dt>02/26</dt></td><td></td><td></td></tr>
             <tr><td>22:XX</td><td>N10</td><td><e> 俄 </e>装甲从 <c> Berdyansk </c> 离开前往 <c> Mariupol </c></td></tr>
             <tr><td>21:XX</td><td>I03</td><td><w> 乌 </w>俘虏了部分<e> 俄 </e>士兵</td></tr>
@@ -239,6 +282,8 @@
     </table>
 </div>
 <img class="pic" alt="" src="Images\image.jpg" />
+<img id="picsrc" class="pic" hidden="hidden" alt="" src="Images\image_src.jpg" />
+<button id="overlay_switch" onclick="switchOverlay()">显示/关闭战况</button>
 <div id="cur"></div>
 </body>
 </html>
