@@ -1,7 +1,7 @@
 下载说明：
     .exe 是程序，下载后按使用方法使用即可
     .cs 是源代码，使用 .Net 6，创建项目后自行编译即可
-    ![Alt text](Screenshot 2022-06-04 211218.png? "下载界面")
+    ![alt text](https://github.com/515621078/QQ_Share/blob/main/2022-06-04-21-05-16%20B%E7%AB%99%E5%BC%B9%E5%B9%95ASS%E5%B0%BA%E5%AF%B8%E4%BF%AE%E6%94%B9/Screenshot%202022-06-04%20211218.png)
     点击文件后，在页面中找到如图中的 download 按钮即可下载
 
 需求的环境：
