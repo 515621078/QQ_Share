@@ -1,10 +1,8 @@
-![download link](https://github.com/515621078/QQ_Share/blob/main/2022-06-04-21-05-16%20B%E7%AB%99%E5%BC%B9%E5%B9%95ASS%E5%B0%BA%E5%AF%B8%E4%BF%AE%E6%94%B9/Screenshot%202022-06-04%20211218.png?raw=true)
-
 下载说明：
     .exe 是程序，下载后按使用方法使用即可
     .cs 是源代码，使用 .Net 6，创建项目后自行编译即可
     点击文件后，在页面中找到如图中的 download 按钮即可下载
-
+    <img src="Screenshot 2022-06-04 211218.png" width="300" title="下载界面">
 需求的环境：
     win_x64系统(x86有可能支持但并未测试)
     可能需要 .Net 6 (或以上) 的运行环境支持 (如果是最新版的win10和win11是自带的)
